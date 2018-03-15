@@ -60,6 +60,7 @@ python版本：Python 2.7.13
 
 讲tensorflow升级到1.2.1
 
+    conda create -n tensorflow python=2.7
     source activate tensorflow
     pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.2.1-py2-none-any.whl
     source deactivate
@@ -75,4 +76,10 @@ python版本：Python 2.7.13
 查看pip的版本
 
     pip -V
+
+查看tensorflow版本
+
+    python
+    import tensorflow as tf
+    tf.__version__
 
