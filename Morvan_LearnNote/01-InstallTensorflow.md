@@ -2,14 +2,51 @@
 
 ## 1. Install  Tensflow for Win 10
 
-### 1.1 Install python
+### 1.1 Install Anaconda
+
+使用Anaconda安装Python，参考链接：http://blog.csdn.net/tina_ttl/article/details/53769256。
 
 
 
-### 1.2 
 
 
+### 1.2 Install Tensorflow
 
+
+参考链接：http://blog.csdn.net/goodshot/article/details/61926805
+
+系统：Win10 64位
+
+Anaconda版本：Anaconda3-4.4.0
+
+python版本：3.6
+
+tensorflow版本：1.2.0
+
+    anaconda search -t conda tensorflow
+    anaconda show dhirschfeld/tensorflow
+    conda install --channel https://conda.anaconda.org/dhirschfeld tensorflow
+    conda list
+
+### 1.3 在Win10下启动tensorboard
+
+进入CMD输入：
+
+    d:
+    cd D:\Workspace\Tensorflow\mnist_with_summaries
+    python full_code.py
+
+执行完full_code.py之后，在当前目录下生成了logs文件夹。
+
+进入CMD输入：
+
+    d:
+    cd D:\ProgramFiles\Anaconda3\Lib\site-packages\tensorflow\tensorboard
+    python tensorboard.py --logdir=D:\Workspace\Tensorflow\mnist_with_summaries\logs
+
+直接使用tensorboard --logdir=logs的时候在Mac下能够正常运行，但是在Win下则会报错：
+
+    tensorboard Fatal error in launcher: Unable to create process using '"'
 
 ## 2 Install Tensorflow for Mac
 Mac版本：10.11.6
